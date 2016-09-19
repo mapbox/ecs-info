@@ -1,0 +1,34 @@
+{
+  "name": "ecs-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "ecs-info": "bin/ecs-info.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/ecs-info.git"
+  },
+  "author": "Mapbox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/ecs-info/issues"
+  },
+  "homepage": "https://github.com/mapbox/ecs-info#readme",
+  "devDependencies": {
+    "@mapbox/mock-aws-sdk-js": "0.0.3",
+    "eslint": "^3.4.0",
+    "nyc": "^8.1.0",
+    "opener": "^1.4.1",
+    "tape": "^4.6.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.5.5",
+    "easy-table": "^1.0.0",
+    "meow": "^3.7.0"
+  }
+}
