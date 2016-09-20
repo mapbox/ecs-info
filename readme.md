@@ -10,11 +10,11 @@ ecs.Cluster.describe('my-cluster', 'us-east-1')
   .then(clusterData => { ... });
 ```
 
+## Cluster description
+
 The object that comes back has circular references that you can use to trace the
 relationships between EC2 instances, ECS services, and ECS tasks that are part
-of the cluster.
-
-The basic structure of this circular object is:
+of the cluster. Basically:
 
 ```
 Cluster {
