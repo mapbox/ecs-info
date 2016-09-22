@@ -32,6 +32,7 @@ A `Cluster` is the [response from an ecs.describeClusters request](http://docs.a
 A `Task` is the [response from an ecs.describeTasks request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ECS.html#describeTasks-property) with additional properties:
 - **instance** the host instance
 - **service** the service this task is a part of (or null)
+- **taskDefinition** the [response from an ecs.describeTaskDefinition request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ECS.html#describeTaskDefinition-property)
 
 A `Service` is the [response from an ecs.describeServices request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ECS.html#describeServices-property) with additional properties:
 - **childTasks** an array of tasks that are part of the service
