@@ -35,7 +35,7 @@ A `Task` is the [response from an ecs.describeTasks request](http://docs.aws.ama
 - **taskDefinition** the [response from an ecs.describeTaskDefinition request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ECS.html#describeTaskDefinition-property)
 
 A `Service` is the [response from an ecs.describeServices request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ECS.html#describeServices-property) with additional properties:
-- **childTasks** an array of tasks that are part of the service
+- **tasks** an array of tasks that are part of the service
 - **loadBalancers** the array of objects describing a service's load balancers (part of the [ecs.describeServices response](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ECS.html#describeServices-property)) is augmented to include:
   - **targetHealthDescriptions** [response from elbv2.describeTargetHealth request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ELBv2.html#describeTargetHealth-property) for the case of an application load balancer
   - **instanceStates** [response from an elb.describeInstanceHealth request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/ELB.html#describeInstanceHealth-property) for the case of a classic load balancer
@@ -44,7 +44,7 @@ An `Instance` is the [response from an ecs.describeContainerInstances request](h
 - **ec2Info** the [response from an ec2.describeInstances request](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/EC2.html#describeInstances-property)
 - **tasks** an array of tasks running on the instance
 
-Futhermore, each of these classes have a set of prototype methods that they implement. These can be useful for formatting or resolving specific information about a cluster, task, service, or instance.
+Furthermore, each of these classes have a set of prototype methods that they implement. These can be useful for formatting or resolving specific information about a cluster, task, service, or instance.
 
 ## Additional treats
 
