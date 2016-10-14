@@ -47,13 +47,13 @@ function overview(cluster) {
   });
 
   var output =`
-  ${formatting.lpad(formatting.underline(cluster.clusterArn), 2)}
+${formatting.lpad(formatting.underline(cluster.clusterArn), 2)}
 
-  ${formatting.lpad(Table.print(resourceData), 2)}
+${formatting.lpad(Table.print(resourceData), 2)}
 
-  ${formatting.lpad(instanceDistribution, 2)}
+${formatting.lpad(instanceDistribution, 2)}
 
-  ${formatting.lpad(Table.print(serviceData), 2)}
+${formatting.lpad(Table.print(serviceData), 2)}
   `;
 
   return console.log(output);
