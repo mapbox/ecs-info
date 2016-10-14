@@ -9,7 +9,7 @@ function overview(cluster) {
   const serviceData = cluster.services.map(service => ({
     Service: service.niceName(),
     'Running Tasks': service.tasks.length
-  }));
+  })).sort((a, b) => a.Service > b.Service ? 1 : -1);
 
   const freeMemory = cluster.instanceWithMostFreeMemory();
   const freeCpu = cluster.instanceWithMostFreeCpu();
