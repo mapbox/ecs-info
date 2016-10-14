@@ -16,9 +16,9 @@ function overview(cluster) {
 
   const resourceData = {
     EC2s: cluster.registeredContainerInstancesCount,
-    'Memory (available/registered)': `${cluster.availableResources().mem}/${cluster.registeredResources().mem}`,
+    'Memory (available/registered)': `${formatting.memory(cluster.availableResources().mem)}/${formatting.memory(cluster.registeredResources().mem)}GB`,
     'CPU (available/registered)': `${cluster.availableResources().cpu}/${cluster.registeredResources().cpu}`,
-    'Most free memory': `${freeMemory.availableMemory()} (${freeMemory.ec2InstanceId})`,
+    'Most free memory': `${formatting.memory(freeMemory.availableMemory())}GB (${freeMemory.ec2InstanceId})`,
     'Most free CPU': `${freeCpu.availableCpu()} (${freeCpu.ec2InstanceId})`,
     'Total running tasks': cluster.runningTasksCount
   };

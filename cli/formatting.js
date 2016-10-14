@@ -3,3 +3,5 @@ module.exports.lpad = (str, spaces) =>
 
 module.exports.underline = str =>
   `${str}\n${(new Array(str.length)).fill('-').join('')}`;
+
+module.exports.memory = mb => `${(mb / 1024).toFixed(2)}`;
