@@ -25,7 +25,7 @@ var cli = meow(`
 
 var command = cli.input[0];
 var name = cli.input[1];
-var region = cli.region || 'us-east-1';
+var region = cli.flags.region || 'us-east-1';
 
 if (!command) console.error('ERROR: no command specified');
 if (!name) console.error('ERROR: no cluster name specified');
