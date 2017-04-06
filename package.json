@@ -1,5 +1,5 @@
 {
-  "name": "ecs-info",
+  "name": "@mapbox/ecs-info",
   "version": "0.0.7",
   "description": "",
   "main": "index.js",
