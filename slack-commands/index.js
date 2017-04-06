@@ -12,7 +12,7 @@ module.exports = function(slackArgs, callback) {
   if (err) return callback(err);
 
   ecs.Cluster.byName(slackArgs.cluster, slackArgs.region)
-    .then(cluster => require(`${slackArgs.command}`)(cluster, slackArgs, callback))
+    .then(cluster => require(`${slackArgs.component/slackArgs.command}`)(cluster, slackArgs, callback))
     .catch(err => console.error(err.stack));
 };
 
