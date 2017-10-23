@@ -3,5 +3,6 @@ module.exports = {
   Task: require('./lib/Task'),
   Instance: require('./lib/Instance'),
   Service: require('./lib/Service'),
-  iamPermissions: require('./lib/permissions')
+  iamPermissions: require('./lib/permissions'),
+  slackCommands: require('./slack-commands')
 };
